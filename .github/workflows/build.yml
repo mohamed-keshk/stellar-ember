@@ -51,14 +51,17 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        # Install dependencies using pnpm without requiring a lockfile
+        # 1. Install JS dependencies
         pnpm install --no-frozen-lockfile
-        
-        # Manually ensure the standalone Tailwind binary is in the PATH
-        # Hugo's Tailwind v4 integration often prefers the standalone binary
+
+        # 2. Download Standalone Tailwind CLI to a custom local bin folder
+        mkdir -p ./bin
         curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64
-        chmod +x tailwindcss-linux-x64
-        sudo mv tailwindcss-linux-x64 /usr/local/bin/tailwindcss
+        mv tailwindcss-linux-x64 ./bin/tailwindcss
+        chmod +x ./bin/tailwindcss
+        
+        # 3. Verify it works and show the path for debugging
+        ./bin/tailwindcss --help | head -n 1
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v3
@@ -74,11 +77,16 @@ jobs:
       env:
         HUGO_ENVIRONMENT: production
         HUGO_BLOX_LICENSE: ${{ secrets.HUGO_BLOX_LICENSE }}
-        # Crucial for finding Preact during JS build
         NODE_PATH: ${{ github.workspace }}/node_modules
       run: |
+        # Add our custom bin folder to the FRONT of the PATH
+        export PATH="${{ github.workspace }}/bin:$PATH"
+        
+        # Check which tailwind Hugo will see
+        which tailwindcss
+        
         hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
-
+        
     - name: Generate Pagefind Search
       run: |
         pnpm run pagefind
