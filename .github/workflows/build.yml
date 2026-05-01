@@ -29,63 +29,42 @@ jobs:
       artifact-id: ${{ steps.upload.outputs.artifact-id }}
     steps:
     - name: Checkout
-      uses: actions/checkout@v4 # Updated to v4 for stability
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
 
     - name: Setup Node.js
-      uses: actions/setup-node@v4 # Updated to v4
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ env.NODE_VERSION }}
-
-    - name: Setup pnpm
-      if: hashFiles('package.json') != ''
-      uses: pnpm/action-setup@v4
 
     - name: Get Hugo Version
       id: hugo-version
       run: |
+        # Install yq to read your hugoblox.yaml
         YQ_VERSION="v4.44.1"
         wget -q -O /tmp/yq "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64"
         sudo mv /tmp/yq /usr/local/bin/yq
         sudo chmod +x /usr/local/bin/yq
         
-        VERSION=$(yq '.build.hugo_version // ""' hugoblox.yaml 2>/dev/null | grep -v '^null$' || true)
-        DEFAULT_VERSION="0.161.1" # Bumped to match your error log version
-        VERSION=${VERSION:-$DEFAULT_VERSION}
-        
+        # Extract version from your hugoblox.yaml
+        VERSION=$(yq '.build.hugo_version' hugoblox.yaml)
         echo "HUGO_VERSION=$VERSION" >> $GITHUB_ENV
-        echo "Using Hugo version: $VERSION"
+        echo "Detected Hugo version from config: $VERSION"
 
-    # --- KEY FIX STARTS HERE ---
     - name: Install Standalone Tailwind CLI
       run: |
+        # This fixes the "tailwindcss is not a Node.js script" error
         echo "Installing Standalone Tailwind CLI..."
         curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64
         chmod +x tailwindcss-linux-x64
         sudo mv tailwindcss-linux-x64 /usr/local/bin/tailwindcss
-    # --- KEY FIX ENDS HERE ---
-
-    - name: Install dependencies
-      run: |
-        if [ -f "package.json" ]; then
-          pnpm install --no-frozen-lockfile || npm install
-        fi
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v3
       with:
         hugo-version: ${{ env.HUGO_VERSION }}
         extended: true
-
-    - uses: actions/cache@v4
-      with:
-        path: |
-          /tmp/hugo_cache_runner/
-          node_modules/
-        key: ${{ runner.os }}-hugo-deps-${{ hashFiles('**/go.mod', '**/pnpm-lock.yaml') }}
-        restore-keys: |
-          ${{ runner.os }}-hugo-deps-
 
     - name: Setup Pages
       id: pages
@@ -97,12 +76,6 @@ jobs:
         HUGO_BLOX_LICENSE: ${{ secrets.HUGO_BLOX_LICENSE }}
       run: |
         hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
-
-    - name: Generate Pagefind search index
-      run: |
-        if [ -f "package.json" ] && grep -q "pagefind" package.json; then
-          npx pagefind --site "public"
-        fi
 
     - name: Upload artifact
       id: upload
