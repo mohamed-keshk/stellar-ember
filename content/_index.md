@@ -87,7 +87,7 @@ sections:
         - name: Mechanical Design & Analysis
           items:
             - name: SolidWorks
-              icon: fas/cube
+              icon: custom/SolidWorks
             - name: Autodesk Fusion
               icon: fas/cubes
             - name: Ansys
