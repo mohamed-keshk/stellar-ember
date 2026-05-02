@@ -42,28 +42,26 @@ jobs:
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v3
       with:
-        hugo-version: '0.161.1'
+        # Pinned to 0.160.0 to avoid the 0.161.1 binary-check bug
+        hugo-version: '0.160.0'
         extended: true
 
     - name: Setup Pages
       id: pages
       uses: actions/configure-pages@v5
 
-    - name: Manual Tailwind Build
-      run: |
-        # Manually compile the CSS so Hugo doesn't have to call the binary
-        # This bypasses the 'not a Node.js script' error entirely
-        mkdir -p assets/css
-        ./node_modules/.bin/tailwindcss -i assets/css/main.css -o assets/css/compiled.css --minify || true
-
     - name: Build with Hugo
       env:
         HUGO_ENVIRONMENT: production
         HUGO_BLOX_LICENSE: ${{ secrets.HUGO_BLOX_LICENSE }}
       run: |
-        # We run the standard build. If it still fails on the internal transform,
-        # Hugo Blox is forced to use the compiled version.
-        hugo build --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        # Clear resources cache to ensure a fresh Tailwind run
+        rm -rf resources/_gen
+        
+        # Ensure node_modules/.bin is in the path
+        export PATH=$PATH:$(pwd)/node_modules/.bin
+        
+        hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
