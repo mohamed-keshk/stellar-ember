@@ -1,7 +1,6 @@
 # Configuration of Hugo
 # Guide: https://docs.hugoblox.com/tutorial/
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
-# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Website name (set in params.yaml under hugoblox.branding.name)
 title: ''
@@ -49,7 +48,23 @@ markup:
   _merge: deep
   highlight:
     lineNos: false
+
+############################
+## SECURITY (FIXED FOR TAILWIND V4)
+############################
+
 security:
-  _merge: deep
+  exec:
+    allow:
+      - '^tailwindcss$'
+      - '^npx$'
+      - '^postcss$'
+      - '^go$'
+      - '^node$'
+    osEnv:
+      - '(?i)^(PATH|NODE_PATH)$'
+  node:
+    disable: true
+
 sitemap:
   _merge: deep
