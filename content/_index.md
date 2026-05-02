@@ -18,10 +18,10 @@ sections:
         enable: true
         prefix: "I build"
         strings:
-          - "full-stack web apps"
-          - "scalable APIs"
-          - "beautiful UIs"
-          - "open source tools"
+          - "Mobile Robots"
+          - "Autonomous Drones"
+          - "Embedded Systems"
+          - "Integrated Mechatronic systems"
         type_speed: 70
         delete_speed: 40
         pause_time: 2500
