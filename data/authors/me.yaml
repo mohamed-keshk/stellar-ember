@@ -2,99 +2,107 @@ schema: hugoblox/author/v1
 slug: me
 is_owner: true
 name:
-  display: Alex Johnson
-  given: Alex
-  family: Johnson
+  [cite_start]display: Mohamed Keshk # [cite: 1]
+  [cite_start]given: Mohamed # [cite: 1]
+  [cite_start]family: Keshk # [cite: 1]
 postnominals: []
 status:
-  icon: "💻"  # Emoji shown on avatar badge: 💻 developer, 🎨 designer, 🚀 startup, 🔬 researcher, 🎓 student
-role: Full-Stack Developer
-email: alex@example.com
+  icon: "🤖"  # I changed this to a robot to fit mechatronics!
+[cite_start]role: Senior Mechatronics Engineer - Autonomous Systems # [cite: 2]
+[cite_start]email: Mohamed.t.keshk@gmail.com # [cite: 3]
 bio: |
-  Full-stack developer with 5+ years of experience building scalable web applications.
-  Passionate about modern JavaScript, cloud architecture, and creating delightful user experiences.
+  Senior Mechatronics / Hardware Engineer with 9 years of experience delivering autonomous UAV and robotic systems from concept to series production. # [cite: 6]
+  Proven ownership of PCB Design, Mechanical Integration, Embedded Software, and Validation Testing. # [cite: 7]
 
 affiliations:
-  - name: Tech Corp
-    url: https://techcorp.example.com
+  - [cite_start]name: avemoy FlexCo # [cite: 10]
 
 links:
   - icon: at-symbol
-    url: mailto:alex@example.com
+    [cite_start]url: mailto:Mohamed.t.keshk@gmail.com # [cite: 3]
     label: E-mail Me
-  - icon: brands/github
-    url: https://github.com/alexjohnson
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/alexjohnson/
-  - icon: brands/x
-    url: https://x.com/alexjohnson
+    [cite_start]url: https://www.linkedin.com/in/mohamed-t-keshk/ # [cite: 3]
+  - icon: brands/github
+    [cite_start]url: https://github.com/mohamed-keshk # [cite: 5]
 
 interests:
-  - Web Development
-  - Cloud Architecture
-  - Open Source
-  - Developer Experience
+  - [cite_start]Autonomous Systems & UAVs # [cite: 6, 13]
+  - [cite_start]PCB Design & Electronics # [cite: 7, 47]
+  - [cite_start]Robotics (ROS) # [cite: 56, 68]
+  - [cite_start]Rapid Prototyping & Manufacturing # [cite: 8, 67]
 
 education:
-  - degree: B.S. Computer Science
-    institution: State University
-    start: 2015-09-01
-    end: 2019-05-31
+  - [cite_start]degree: Bachelor of Engineering and Applied Sciences in Mechatronics Engineering # [cite: 52]
+    [cite_start]institution: Nile University # [cite: 51]
+    [cite_start]start: 2016-09-01 # [cite: 55]
+    [cite_start]end: 2021-07-31 # [cite: 55]
     summary: |
-      Focus on software engineering and distributed systems.
-      Senior project on distributed caching systems.
-    button:
-      text: View Project
-      url: https://github.com/alexjohnson/senior-project
-      icon: brands/github
+      Graduation Project (Funded by ASRT, Mentored by Valeo): Designed an Autonomous Mobile Robot (AMR) with 200kg payload capacity using ROS and LIDAR SLAM navigation. Grade: A+. # [cite: 54, 56, 57]
+      Research: Designed a Neural Network-controlled Stewart Platform (6-DOF) using MATLAB and MSC Adams co-simulation. # [cite: 58]
 
 experience:
-  - role: Senior Software Engineer
-    org: Tech Corp
-    start: 2023-01-01
+  - [cite_start]role: Mechatronics Team Lead # [cite: 11]
+    [cite_start]org: avemoy FlexCo # [cite: 10]
+    [cite_start]start: 2025-02-01 # [cite: 12]
     summary: |
-      Lead development of microservices architecture serving 1M+ users.
-      Improved API response time by 40% through optimization.
-      Mentored team of 5 junior developers.
-  - role: Full-Stack Developer
-    org: Startup Inc
-    start: 2021-06-01
-    end: 2022-12-31
+      Leading the Mechatronics development of multiple autonomous UAV fleets and ground assisting infrastructure. # [cite: 13]
+      Designed and manufactured custom UAV prototyping and testing platform (The Dragonfly) and Series Production Drone (The Firefly). # [cite: 14, 20]
+      Designed a fully autonomous docking station handling precision landing, battery charging, and data offload. # [cite: 25]
+  - [cite_start]role: Innovation Hub Executive # [cite: 29]
+    [cite_start]org: Nile University # [cite: 28]
+    [cite_start]start: 2022-09-01 # [cite: 31]
+    [cite_start]end: 2025-02-01 # [cite: 31]
     summary: |
-      Built and deployed 3 production applications from scratch.
-      Implemented CI/CD pipeline reducing deployment time by 60%.
-      Led migration from monolith to microservices architecture.
-  - role: Junior Developer
-    org: Web Agency
-    start: 2020-01-01
-    end: 2021-05-31
+      Acted as technical lead for researchers and startups, providing design-for-manufacturing (DFM) reviews and electronic subsystem prototyping. # [cite: 32]
+      Helped more than 500 individual engineering students and researchers, 25 graduation projects and 3 Startups. # [cite: 33]
+      Designed and manufactured a Hubless Rim-driven Brushless DC Thruster for Autonomous Underwater Vehicles (AUVs). # [cite: 34]
+  - [cite_start]role: Innovation Hub Engineer # [cite: 39]
+    [cite_start]org: Nile University # [cite: 28]
+    [cite_start]start: 2021-09-01 # [cite: 40]
+    [cite_start]end: 2022-09-01 # [cite: 40]
     summary: |
-      Developed client websites using React and modern web technologies.
-      Participated in code reviews and agile ceremonies.
+      Lab Operations: Provided technical support to all lab visitors and ensured all machines and equipment are maintained and in proper working conditions to ensure highest uptime. # [cite: 41]
+      Technical Instruction: Assisted in creating and teaching three courses in ECEN major: Physical Sensors, Transducers, and Instruments lab, Analog and Digital Electronics lab and Communications Design Lab course. # [cite: 42]
+  - [cite_start]role: Electronic Design Engineer # [cite: 44]
+    [cite_start]org: Tensor Electronics # [cite: 43]
+    [cite_start]start: 2015-07-01 # [cite: 46]
+    [cite_start]end: 2021-09-01 # [cite: 46]
+    summary: |
+      PCB Design & Layout: Led the design of multiple Smart Home system modules from schematic capture to mass production. # [cite: 47]
+      Embedded Systems: Developed hardware and firmware for RF communication modules. # [cite: 48]
+      Power Management: Designed power switching circuits using TRIACs, Relays, and Opto-isolators, adhering to safety standards for mains-voltage applications. # [cite: 49]
 
 skills:
-  - name: Development
+  - [cite_start]name: Electronics & Hardware # [cite: 66]
     items:
-      - label: TypeScript
+      - [cite_start]label: PCB Design (KiCad/Proteus) # [cite: 66]
         level: 5
-      - label: React
+      - [cite_start]label: Microcontrollers (ESP32/STM32) # [cite: 66]
         level: 5
-      - label: Node.js
-        level: 5
-      - label: Python
+      - [cite_start]label: Power Electronics # [cite: 66]
         level: 4
-  - name: DevOps
+  - [cite_start]name: Mechanical & Manufacturing # [cite: 67]
     items:
-      - label: Docker
-        level: 4
-      - label: AWS
-        level: 4
-      - label: CI/CD
+      - [cite_start]label: SolidWorks # [cite: 67]
         level: 5
+      - [cite_start]label: 3D Printing (SLA/SLS/FDM) # [cite: 67]
+        level: 5
+      - [cite_start]label: CNC Machining # [cite: 67]
+        level: 4
+  - [cite_start]name: Software & Scripting # [cite: 68]
+    items:
+      - [cite_start]label: C/C++ # [cite: 68]
+        level: 5
+      - [cite_start]label: Python # [cite: 68]
+        level: 4
+      - [cite_start]label: ROS # [cite: 68]
+        level: 4
 
-languages:
-  - name: English
-    level: 5
-    label: Native
-
-awards: []
+awards:
+  - [cite_start]title: Certified SolidWorks Associate (CSWA) - Mechanical Design & Additive Manufacturing # [cite: 61]
+    [cite_start]date: 2023-01-01 # [cite: 61]
+  - [cite_start]title: Data Analysis Professional Track - Udacity # [cite: 60]
+    [cite_start]date: 2023-01-01 # [cite: 60]
+  - [cite_start]title: Festo Professional Diploma - PLC Programming & Electro-Pneumatics # [cite: 62]
+    [cite_start]date: 2020-01-01 # [cite: 62]
