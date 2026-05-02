@@ -57,8 +57,6 @@ security:
   exec:
     allow:
       - '^tailwindcss$'
-      - '^npx$'
-      - '^postcss$'
       - '^go$'
       - '^node$'
   node:
