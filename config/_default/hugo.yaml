@@ -61,8 +61,6 @@ security:
       - '^postcss$'
       - '^go$'
       - '^node$'
-    osEnv:
-      - '(?i)^(PATH|NODE_PATH)$'
   node:
     disable: true
 
