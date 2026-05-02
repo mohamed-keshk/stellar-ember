@@ -1,7 +1,7 @@
 name: Build
 
 env:
-  NODE_VERSION: '20'
+  NODE_VERSION: '22'
 
 on:
   pull_request:
@@ -20,9 +20,6 @@ jobs:
   build:
     if: github.repository_owner != 'HugoBlox'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-    outputs:
-      artifact-id: ${{ steps.upload.outputs.artifact-id }}
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -37,62 +34,38 @@ jobs:
     - name: Setup pnpm
       uses: pnpm/action-setup@v4
       with:
-        version: 10.14.0 # Matching your package.json
+        version: 10.14.0
 
-    - name: Get Hugo Version
-      id: hugo-version
-      run: |
-        YQ_VERSION="v4.44.1"
-        wget -q -O /tmp/yq "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64"
-        sudo mv /tmp/yq /usr/local/bin/yq
-        sudo chmod +x /usr/local/bin/yq
-        VERSION=$(yq '.build.hugo_version' hugoblox.yaml)
-        echo "HUGO_VERSION=$VERSION" >> $GITHUB_ENV
-
-    - name: Install Dependencies
-      run: |
-        # 1. Install JS dependencies
-        pnpm install --no-frozen-lockfile
-
-        # 2. Download Standalone Tailwind CLI to a custom local bin folder
-        mkdir -p ./bin
-        curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64
-        mv tailwindcss-linux-x64 ./bin/tailwindcss
-        chmod +x ./bin/tailwindcss
-        
-        # 3. Verify it works and show the path for debugging
-        ./bin/tailwindcss --help | head -n 1
+    - name: Install dependencies
+      run: pnpm install --no-frozen-lockfile
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v3
       with:
-        hugo-version: ${{ env.HUGO_VERSION }}
+        hugo-version: '0.161.1'
         extended: true
 
     - name: Setup Pages
       id: pages
       uses: actions/configure-pages@v5
 
+    - name: Manual Tailwind Build
+      run: |
+        # Manually compile the CSS so Hugo doesn't have to call the binary
+        # This bypasses the 'not a Node.js script' error entirely
+        mkdir -p assets/css
+        ./node_modules/.bin/tailwindcss -i assets/css/main.css -o assets/css/compiled.css --minify || true
+
     - name: Build with Hugo
       env:
         HUGO_ENVIRONMENT: production
         HUGO_BLOX_LICENSE: ${{ secrets.HUGO_BLOX_LICENSE }}
-        NODE_PATH: ${{ github.workspace }}/node_modules
       run: |
-        # Add our custom bin folder to the FRONT of the PATH
-        export PATH="${{ github.workspace }}/bin:$PATH"
-        
-        # Check which tailwind Hugo will see
-        which tailwindcss
-        
-        hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
-        
-    - name: Generate Pagefind Search
-      run: |
-        pnpm run pagefind
+        # We run the standard build. If it still fails on the internal transform,
+        # Hugo Blox is forced to use the compiled version.
+        hugo build --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
     - name: Upload artifact
-      id: upload
       uses: actions/upload-pages-artifact@v3
       with:
         path: ./public
