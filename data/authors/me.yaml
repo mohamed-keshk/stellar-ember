@@ -2,107 +2,107 @@ schema: hugoblox/author/v1
 slug: me
 is_owner: true
 name:
-  [cite_start]display: Mohamed Keshk # [cite: 1]
-  [cite_start]given: Mohamed # [cite: 1]
-  [cite_start]family: Keshk # [cite: 1]
+  display: Mohamed Keshk
+  given: Mohamed
+  family: Keshk
 postnominals: []
 status:
   icon: "🤖"  # I changed this to a robot to fit mechatronics!
-[cite_start]role: Senior Mechatronics Engineer - Autonomous Systems # [cite: 2]
-[cite_start]email: Mohamed.t.keshk@gmail.com # [cite: 3]
+role: Senior Mechatronics Engineer - Autonomous Systems
+email: Mohamed.t.keshk@gmail.com
 bio: |
-  Senior Mechatronics / Hardware Engineer with 9 years of experience delivering autonomous UAV and robotic systems from concept to series production. # [cite: 6]
-  Proven ownership of PCB Design, Mechanical Integration, Embedded Software, and Validation Testing. # [cite: 7]
+  Senior Mechatronics / Hardware Engineer with 9 years of experience delivering autonomous UAV and robotic systems from concept to series production.
+  Proven ownership of PCB Design, Mechanical Integration, Embedded Software, and Validation Testing.
 
 affiliations:
-  - [cite_start]name: avemoy FlexCo # [cite: 10]
+  - name: avemoy FlexCo
 
 links:
   - icon: at-symbol
-    [cite_start]url: mailto:Mohamed.t.keshk@gmail.com # [cite: 3]
+    url: mailto:Mohamed.t.keshk@gmail.com
     label: E-mail Me
   - icon: brands/linkedin
-    [cite_start]url: https://www.linkedin.com/in/mohamed-t-keshk/ # [cite: 3]
+    url: https://www.linkedin.com/in/mohamed-t-keshk/
   - icon: brands/github
-    [cite_start]url: https://github.com/mohamed-keshk # [cite: 5]
+    url: https://github.com/mohamed-keshk
 
 interests:
-  - [cite_start]Autonomous Systems & UAVs # [cite: 6, 13]
-  - [cite_start]PCB Design & Electronics # [cite: 7, 47]
-  - [cite_start]Robotics (ROS) # [cite: 56, 68]
-  - [cite_start]Rapid Prototyping & Manufacturing # [cite: 8, 67]
+  - Autonomous Systems & UAVs
+  - PCB Design & Electronics
+  - Robotics (ROS)
+  - Rapid Prototyping & Manufacturing
 
 education:
-  - [cite_start]degree: Bachelor of Engineering and Applied Sciences in Mechatronics Engineering # [cite: 52]
-    [cite_start]institution: Nile University # [cite: 51]
-    [cite_start]start: 2016-09-01 # [cite: 55]
-    [cite_start]end: 2021-07-31 # [cite: 55]
+  - degree: Bachelor of Engineering and Applied Sciences in Mechatronics Engineering
+    institution: Nile University
+    start: 2016-09-01
+    end: 2021-07-31
     summary: |
-      Graduation Project (Funded by ASRT, Mentored by Valeo): Designed an Autonomous Mobile Robot (AMR) with 200kg payload capacity using ROS and LIDAR SLAM navigation. Grade: A+. # [cite: 54, 56, 57]
-      Research: Designed a Neural Network-controlled Stewart Platform (6-DOF) using MATLAB and MSC Adams co-simulation. # [cite: 58]
+      Graduation Project (Funded by ASRT, Mentored by Valeo): Designed an Autonomous Mobile Robot (AMR) with 200kg payload capacity using ROS and LIDAR SLAM navigation. Grade: A+.
+      Research: Designed a Neural Network-controlled Stewart Platform (6-DOF) using MATLAB and MSC Adams co-simulation.
 
 experience:
-  - [cite_start]role: Mechatronics Team Lead # [cite: 11]
-    [cite_start]org: avemoy FlexCo # [cite: 10]
-    [cite_start]start: 2025-02-01 # [cite: 12]
+  - role: Mechatronics Team Lead
+    org: avemoy FlexCo
+    start: 2025-02-01
     summary: |
-      Leading the Mechatronics development of multiple autonomous UAV fleets and ground assisting infrastructure. # [cite: 13]
-      Designed and manufactured custom UAV prototyping and testing platform (The Dragonfly) and Series Production Drone (The Firefly). # [cite: 14, 20]
-      Designed a fully autonomous docking station handling precision landing, battery charging, and data offload. # [cite: 25]
-  - [cite_start]role: Innovation Hub Executive # [cite: 29]
-    [cite_start]org: Nile University # [cite: 28]
-    [cite_start]start: 2022-09-01 # [cite: 31]
-    [cite_start]end: 2025-02-01 # [cite: 31]
+      Leading the Mechatronics development of multiple autonomous UAV fleets and ground assisting infrastructure.
+      Designed and manufactured custom UAV prototyping and testing platform (The Dragonfly) and Series Production Drone (The Firefly).
+      Designed a fully autonomous docking station handling precision landing, battery charging, and data offload.
+  - role: Innovation Hub Executive
+    org: Nile University
+    start: 2022-09-01
+    end: 2025-02-01
     summary: |
-      Acted as technical lead for researchers and startups, providing design-for-manufacturing (DFM) reviews and electronic subsystem prototyping. # [cite: 32]
-      Helped more than 500 individual engineering students and researchers, 25 graduation projects and 3 Startups. # [cite: 33]
-      Designed and manufactured a Hubless Rim-driven Brushless DC Thruster for Autonomous Underwater Vehicles (AUVs). # [cite: 34]
-  - [cite_start]role: Innovation Hub Engineer # [cite: 39]
-    [cite_start]org: Nile University # [cite: 28]
-    [cite_start]start: 2021-09-01 # [cite: 40]
-    [cite_start]end: 2022-09-01 # [cite: 40]
+      Acted as technical lead for researchers and startups, providing design-for-manufacturing (DFM) reviews and electronic subsystem prototyping.
+      Helped more than 500 individual engineering students and researchers, 25 graduation projects and 3 Startups.
+      Designed and manufactured a Hubless Rim-driven Brushless DC Thruster for Autonomous Underwater Vehicles (AUVs).
+  - role: Innovation Hub Engineer
+    org: Nile University
+    start: 2021-09-01
+    end: 2022-09-01
     summary: |
-      Lab Operations: Provided technical support to all lab visitors and ensured all machines and equipment are maintained and in proper working conditions to ensure highest uptime. # [cite: 41]
-      Technical Instruction: Assisted in creating and teaching three courses in ECEN major: Physical Sensors, Transducers, and Instruments lab, Analog and Digital Electronics lab and Communications Design Lab course. # [cite: 42]
-  - [cite_start]role: Electronic Design Engineer # [cite: 44]
-    [cite_start]org: Tensor Electronics # [cite: 43]
-    [cite_start]start: 2015-07-01 # [cite: 46]
-    [cite_start]end: 2021-09-01 # [cite: 46]
+      Lab Operations: Provided technical support to all lab visitors and ensured all machines and equipment are maintained and in proper working conditions to ensure highest uptime.
+      Technical Instruction: Assisted in creating and teaching three courses in ECEN major: Physical Sensors, Transducers, and Instruments lab, Analog and Digital Electronics lab and Communications Design Lab course.
+  - role: Electronic Design Engineer
+    org: Tensor Electronics
+    start: 2015-07-01
+    end: 2021-09-01
     summary: |
-      PCB Design & Layout: Led the design of multiple Smart Home system modules from schematic capture to mass production. # [cite: 47]
-      Embedded Systems: Developed hardware and firmware for RF communication modules. # [cite: 48]
-      Power Management: Designed power switching circuits using TRIACs, Relays, and Opto-isolators, adhering to safety standards for mains-voltage applications. # [cite: 49]
+      PCB Design & Layout: Led the design of multiple Smart Home system modules from schematic capture to mass production.
+      Embedded Systems: Developed hardware and firmware for RF communication modules.
+      Power Management: Designed power switching circuits using TRIACs, Relays, and Opto-isolators, adhering to safety standards for mains-voltage applications.
 
 skills:
-  - [cite_start]name: Electronics & Hardware # [cite: 66]
+  - name: Electronics & Hardware
     items:
-      - [cite_start]label: PCB Design (KiCad/Proteus) # [cite: 66]
+      - label: PCB Design (KiCad/Proteus)
         level: 5
-      - [cite_start]label: Microcontrollers (ESP32/STM32) # [cite: 66]
+      - label: Microcontrollers (ESP32/STM32)
         level: 5
-      - [cite_start]label: Power Electronics # [cite: 66]
+      - label: Power Electronics
         level: 4
-  - [cite_start]name: Mechanical & Manufacturing # [cite: 67]
+  - name: Mechanical & Manufacturing
     items:
-      - [cite_start]label: SolidWorks # [cite: 67]
+      - label: SolidWorks
         level: 5
-      - [cite_start]label: 3D Printing (SLA/SLS/FDM) # [cite: 67]
+      - label: 3D Printing (SLA/SLS/FDM)
         level: 5
-      - [cite_start]label: CNC Machining # [cite: 67]
+      - label: CNC Machining
         level: 4
-  - [cite_start]name: Software & Scripting # [cite: 68]
+  - name: Software & Scripting
     items:
-      - [cite_start]label: C/C++ # [cite: 68]
+      - label: C/C++
         level: 5
-      - [cite_start]label: Python # [cite: 68]
+      - label: Python
         level: 4
-      - [cite_start]label: ROS # [cite: 68]
+      - label: ROS
         level: 4
 
 awards:
-  - [cite_start]title: Certified SolidWorks Associate (CSWA) - Mechanical Design & Additive Manufacturing # [cite: 61]
-    [cite_start]date: 2023-01-01 # [cite: 61]
-  - [cite_start]title: Data Analysis Professional Track - Udacity # [cite: 60]
-    [cite_start]date: 2023-01-01 # [cite: 60]
-  - [cite_start]title: Festo Professional Diploma - PLC Programming & Electro-Pneumatics # [cite: 62]
-    [cite_start]date: 2020-01-01 # [cite: 62]
+  - title: Certified SolidWorks Associate (CSWA) - Mechanical Design & Additive Manufacturing
+    date: 2023-01-01
+  - title: Data Analysis Professional Track - Udacity
+    date: 2023-01-01
+  - title: Festo Professional Diploma - PLC Programming & Electro-Pneumatics
+    date: 2020-01-01
