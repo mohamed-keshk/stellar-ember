@@ -77,53 +77,39 @@ sections:
       spacing:
         padding: ["4rem", "0", "4rem", "0"]
   
-  # Visual Tech Stack - Icons organized by category
+# Visual Tech Stack - Icons organized by category
   - block: tech-stack
     id: skills
     content:
       title: "Tech Stack"
-      subtitle: "Technologies I use to build things"
+      subtitle: "Tools and technologies I use to design and build autonomous systems"
       categories:
-        - name: Languages
+        - name: Mechanical Design & Analysis
           items:
-            - name: TypeScript
-              icon: devicon/typescript
-            - name: JavaScript
-              icon: devicon/javascript
+            - name: SolidWorks
+              icon: fas/cube
+            - name: Autodesk Fusion
+              icon: fas/cubes
+            - name: Ansys
+              icon: fas/chart-area
+            - name: MSC Adams
+              icon: fas/cogs
+        - name: Electronics & PCB Design
+          items:
+            - name: KiCad
+              icon: fas/microchip
+            - name: Proteus
+              icon: fas/network-wired
+        - name: Languages & Programming Tools
+          items:
             - name: Python
-              icon: devicon/python
-            - name: Go
-              icon: devicon/go
-        - name: Frontend
-          items:
-            - name: React
-              icon: devicon/react
-            - name: Next.js
-              icon: devicon/nextjs
-            - name: Tailwind CSS
-              icon: devicon/tailwindcss
-            - name: Alpine.js
-              icon: devicon/alpinejs
-        - name: Backend
-          items:
-            - name: Node.js
-              icon: devicon/nodejs
-            - name: Express
-              icon: devicon/express
-            - name: PostgreSQL
-              icon: devicon/postgresql
-            - name: Redis
-              icon: devicon/redis
-        - name: DevOps
-          items:
-            - name: Docker
-              icon: devicon/docker
-            - name: AWS
-              icon: devicon/amazonwebservices
-            - name: GitHub Actions
-              icon: brands/github
-            - name: Vercel
-              icon: devicon/vercel
+              icon: brands/python
+            - name: C/C++
+              icon: fas/file-code
+            - name: ROS
+              icon: fas/robot
+            - name: MATLAB
+              icon: fas/calculator
     design:
       style: grid
       show_levels: false
