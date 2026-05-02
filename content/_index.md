@@ -216,9 +216,10 @@ sections:
       title: Get In Touch
       subtitle: "Let's build something amazing together"
       text: |-
-        I'm always interested in hearing about new projects and opportunities.
-        Whether you're looking to hire, collaborate, or just want to say hi, feel free to reach out!
-      email: alex@example.com
+        I am always open to exploring new engineering opportunities 
+        and challenging projects. Whether you are looking to hire, 
+        collaborate, or simply connect, please feel free to reach out.
+      email: Mohamed.t.keshk@gmail.com
       autolink: true
     design:
       columns: '1'
@@ -234,7 +235,7 @@ sections:
     content:
       title: "Open to Opportunities"
       text: |-
-        I'm currently looking for **senior engineering** or **tech lead** roles.
+        I'm currently looking for **senior mechatronics engineer** or **tech lead** roles.
         
         Let's connect and discuss how I can help your team.
       button:
