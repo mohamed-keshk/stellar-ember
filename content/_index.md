@@ -89,27 +89,27 @@ sections:
             - name: SolidWorks
               icon: custom/Solid
             - name: Autodesk Fusion
-              icon: fas/Fusion
+              icon: custom/Fusion
             - name: Ansys
-              icon: fas/chart-area
+              icon: custom/Ansys
             - name: MSC Adams
-              icon: fas/cogs
+              icon: custom/Adams
         - name: Electronics & PCB Design
           items:
             - name: KiCad
-              icon: fas/microchip
+              icon: custom/KiCad
             - name: Proteus
-              icon: fas/network-wired
+              icon: custom/Proteus
         - name: Languages & Programming Tools
           items:
             - name: Python
               icon: brands/python
-            - name: C/C++
-              icon: fas/file-code
+            - name: C
+              icon: custom/C
             - name: ROS
-              icon: fas/robot
+              icon: custom/ROS
             - name: MATLAB
-              icon: fas/calculator
+              icon: custom/matlab
     design:
       style: grid
       show_levels: false
