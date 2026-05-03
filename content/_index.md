@@ -89,7 +89,7 @@ sections:
             - name: SolidWorks
               icon: custom/Solid
             - name: Autodesk Fusion
-              icon: fas/cubes
+              icon: fas/Fusion
             - name: Ansys
               icon: fas/chart-area
             - name: MSC Adams
